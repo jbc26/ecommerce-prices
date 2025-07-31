@@ -88,6 +88,7 @@ class FindProductPriceUseCaseIT {
             .andExpect(jsonPath("$.status", is(HttpStatus.NOT_FOUND.name())));
     }
 
+    // Tests for the REST endpoint to validate the requests to the service using the provided sample data
     private static Stream<Arguments> validProductPrice() {
         return Stream.of(
             Arguments.of(35455, 1, LocalDateTime.of(2020, 6, 14, 10, 0, 0), Money.of(35.50, "EUR")),
